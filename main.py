@@ -1,8 +1,11 @@
 from pyautogui import *
 from time import sleep as pause
 from random import choice
-messages = ["Hola", "Como estas?", "Como te llamas?", "Cual es tu twitter?", "Tenes youtube", "A que horas haces streams?", "Cuando haces streams?", "Todo bien?"]
-time = input("Cada cuanto quieres que se envie?")
+messages = []
+times = int(input("Number of messages:"))
+for i in range(times):
+    messages.append(input("What you want to say?"))
+time = input("Delay? (0 for nothing)")
 while True:
     if(time != ''):
         if('-' in time):
